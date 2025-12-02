@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-29T10:17:32 PST" name="Default suite" finished-at="2025-11-29T10:17:37 PST" duration-ms="5937">
+  <suite started-at="2025-12-02T01:51:41 PST" name="Default suite" finished-at="2025-12-02T01:51:48 PST" duration-ms="6567">
     <groups>
     </groups>
-    <test started-at="2025-11-29T10:17:32 PST" name="Default test" finished-at="2025-11-29T10:17:37 PST" duration-ms="5937">
+    <test started-at="2025-12-02T01:51:41 PST" name="Default test" finished-at="2025-12-02T01:51:48 PST" duration-ms="6567">
       <class name="CodenBox.MyTestCases">
-        <test-method is-config="true" signature="AutomationSetup()[pri:0, instance:CodenBox.MyTestCases@acdb094]" started-at="2025-11-29T10:17:32 PST" name="AutomationSetup" finished-at="2025-11-29T10:17:37 PST" duration-ms="5753" status="PASS">
+        <test-method is-config="true" signature="AutomationSetup()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:41 PST" name="AutomationSetup" finished-at="2025-12-02T01:51:48 PST" duration-ms="6488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AutomationSetup -->
-        <test-method signature="StaticDropDown()[pri:0, instance:CodenBox.MyTestCases@acdb094]" started-at="2025-11-29T10:17:37 PST" name="StaticDropDown" finished-at="2025-11-29T10:17:37 PST" duration-ms="138" status="PASS">
+        <test-method signature="CheckBoxEx()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:48 PST" name="CheckBoxEx" finished-at="2025-12-02T01:51:48 PST" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StaticDropDown -->
-        <test-method is-config="true" signature="AutomationClose()[pri:0, instance:CodenBox.MyTestCases@acdb094]" started-at="2025-11-29T10:17:37 PST" name="AutomationClose" finished-at="2025-11-29T10:17:37 PST" duration-ms="1" status="PASS">
+        </test-method> <!-- CheckBoxEx -->
+        <test-method is-config="true" signature="AutomationClose()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:48 PST" name="AutomationClose" finished-at="2025-12-02T01:51:48 PST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AutomationClose -->

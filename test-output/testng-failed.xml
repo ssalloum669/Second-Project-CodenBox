@@ -5,8 +5,8 @@
     <classes>
       <class name="CodenBox.MyTestCases">
         <methods>
+          <include name="AlertExample"/>
           <include name="AutomationSetup"/>
-          <include name="RadioButton"/>
           <include name="AutomationClose"/>
         </methods>
       </class> <!-- CodenBox.MyTestCases -->
