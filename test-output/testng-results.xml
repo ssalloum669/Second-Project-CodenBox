@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-02T01:51:41 PST" name="Default suite" finished-at="2025-12-02T01:51:48 PST" duration-ms="6567">
+  <suite started-at="2025-12-03T06:37:21 PST" name="Default suite" finished-at="2025-12-03T06:37:34 PST" duration-ms="12660">
     <groups>
     </groups>
-    <test started-at="2025-12-02T01:51:41 PST" name="Default test" finished-at="2025-12-02T01:51:48 PST" duration-ms="6567">
+    <test started-at="2025-12-03T06:37:21 PST" name="Default test" finished-at="2025-12-03T06:37:34 PST" duration-ms="12660">
       <class name="CodenBox.MyTestCases">
-        <test-method is-config="true" signature="AutomationSetup()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:41 PST" name="AutomationSetup" finished-at="2025-12-02T01:51:48 PST" duration-ms="6488" status="PASS">
+        <test-method is-config="true" signature="AutomationSetup()[pri:0, instance:CodenBox.MyTestCases@2072acb2]" started-at="2025-12-03T06:37:21 PST" name="AutomationSetup" finished-at="2025-12-03T06:37:30 PST" duration-ms="9113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AutomationSetup -->
-        <test-method signature="CheckBoxEx()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:48 PST" name="CheckBoxEx" finished-at="2025-12-02T01:51:48 PST" duration-ms="34" status="PASS">
+        <test-method signature="MouseHover()[pri:0, instance:CodenBox.MyTestCases@2072acb2]" started-at="2025-12-03T06:37:30 PST" name="MouseHover" finished-at="2025-12-03T06:37:34 PST" duration-ms="3495" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckBoxEx -->
-        <test-method is-config="true" signature="AutomationClose()[pri:0, instance:CodenBox.MyTestCases@2ceb80a1]" started-at="2025-12-02T01:51:48 PST" name="AutomationClose" finished-at="2025-12-02T01:51:48 PST" duration-ms="1" status="PASS">
+        </test-method> <!-- MouseHover -->
+        <test-method is-config="true" signature="AutomationClose()[pri:0, instance:CodenBox.MyTestCases@2072acb2]" started-at="2025-12-03T06:37:34 PST" name="AutomationClose" finished-at="2025-12-03T06:37:34 PST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AutomationClose -->

@@ -6,10 +6,12 @@ import java.util.Random;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -67,7 +69,7 @@ public class MyTestCases {
 	 System.out.println(AllCheckButtons.size());
 		   for(int i=0;i<AllCheckButtons.size();i++) {
 			//Press option1 and option3
-			   if(i==1) {
+			   if(i==0) {
 				   continue;
 			   }	
 			   AllCheckButtons.get(i).click();	
@@ -128,7 +130,57 @@ driver.findElement(By.xpath("//*//*[@id=\"menu-item-9680\"]/a")).click();
 	  
   }
   
+ @Test(enabled=false)
+ public void WebTable () {
+	 WebElement DivTable=driver.findElement(By.id("product"));
+	 List<WebElement> Table =DivTable.findElements(By.tagName("tr"));
+//	 // I want to print one row, skip the next, then print another row, and so on
+// for (int i=0;i<Table.size();i=i+2) {
+//	 System.out.println(Table.get(i).getText()); 	 
+//}
+	 // if i  want to print the column 
+// for(int i=1;i<Table.size();i++) {
+//	 Table.get(i).findElements(By.tagName("td")).get(0).getText();
+// System.out.println( Table.get(i).findElements(By.tagName("td")).get(0).getText());
+// }
+ System.out.println(Table.get(0).findElements(By.tagName("th")).get(2).getText());
+ 
+	 }
+ 
+ 
+ @Test(enabled=false)
+ public void ElementDisplay() throws InterruptedException {
+	 WebElement HideBox=driver.findElement(By.id("hide-textbox"));
+	 HideBox.click(); 
+	 WebElement DisplayBox=driver.findElement(By.id("displayed-text")); 
+	 //Hide Box
+	boolean ActualResult= DisplayBox.isDisplayed();
+    boolean ExpectedResult=false;
+	 Assert.assertEquals(ActualResult, ExpectedResult);
+	 //Show Box
+	 WebElement ShowBox=driver.findElement(By.id("show-textbox"));
+	 ShowBox.click();
+	 boolean ActualResult2=DisplayBox.isDisplayed();
+	 boolean ExpectedResult2=true;
+     Assert.assertEquals(ActualResult2, ExpectedResult2);
+ }
   
+  @Test 
+  public void  MouseHover() throws InterruptedException {
+	 WebElement MouseButton=driver.findElement(By.id("mousehover"));
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript("window.scrollTo(0, 2000)");
+	 Actions MyAction=new Actions(driver);
+	 MyAction.moveToElement(MouseButton).build().perform();
+	  WebElement Selection=driver.findElement(By.linkText("Top"));
+	  Thread.sleep(3000);
+	  Selection.click();
+	  WebElement SelectionTwo=driver.findElement(By.linkText("Reload"));
+	  Thread.sleep(3000);
+	  SelectionTwo.click(); 
+	  
+	  
+  }
     
     
      @AfterTest
