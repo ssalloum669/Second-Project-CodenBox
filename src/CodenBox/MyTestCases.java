@@ -165,7 +165,7 @@ driver.findElement(By.xpath("//*//*[@id=\"menu-item-9680\"]/a")).click();
      Assert.assertEquals(ActualResult2, ExpectedResult2);
  }
   
-  @Test 
+  @Test (enabled=false)
   public void  MouseHover() throws InterruptedException {
 	 WebElement MouseButton=driver.findElement(By.id("mousehover"));
 	 JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -177,11 +177,59 @@ driver.findElement(By.xpath("//*//*[@id=\"menu-item-9680\"]/a")).click();
 	  Selection.click();
 	  WebElement SelectionTwo=driver.findElement(By.linkText("Reload"));
 	  Thread.sleep(3000);
-	  SelectionTwo.click(); 
-	  
+	  SelectionTwo.click();  
 	  
   }
-    
+  @Test(enabled=false)
+  public void EnableAndDisable() throws InterruptedException {
+	WebElement DisableButton=driver.findElement(By.id("disabled-button"));
+	DisableButton.click();
+	  WebElement FieldInput=driver.findElement(By.id("enabled-example-input"));
+	 boolean ExpectedResult=false;
+	boolean ActualResult= FieldInput.isEnabled();
+    Assert.assertEquals(ActualResult, ExpectedResult);
+    Thread.sleep(3000);
+	WebElement EnableButton=driver.findElement(By.id("enabled-button"));
+	EnableButton.click();
+	 boolean ExpectedResult2=true;
+	boolean ActualResult2= FieldInput.isEnabled();
+	 Assert.assertEquals(ActualResult2, ExpectedResult2);
+	 FieldInput.sendKeys("salloum salman");
+  }
+  
+  @Test (enabled=false)
+  public void CalendarExample() throws InterruptedException {
+	 WebElement OpenCalendar=driver.findElement(By.linkText("Booking Calendar"));
+	 OpenCalendar.click();
+	 // to move from tab to another and handle the other tab 
+	 Set<String> Handels=driver.getWindowHandles();
+	 List<String> AllTabs=new ArrayList<>(Handels);
+	 Thread.sleep(3000);
+	 driver.switchTo().window(AllTabs.get(1));
+	 List<WebElement> availableDates =driver.findElements(By.cssSelector("td.date_available"));
+      System.out.println(availableDates.size());
+      for (int i = 0; i < availableDates.size(); i++) {
+	   availableDates = driver.findElements(By.cssSelector("td.date_available"));
+        availableDates.get(i).click();  
+      }	 	 
+  }
+      
+     @Test
+     public void IFrameExample() throws InterruptedException {
+    	 JavascriptExecutor js = (JavascriptExecutor) driver;
+    	 js.executeScript("window.scrollTo(0, 2300)");
+   driver.switchTo().frame("courses-iframe");
+ WebElement Content= driver.findElement(By.cssSelector(".ct-mobile-meta-item.btn-nav-mobile.open-menu"));
+ Content.click();
+	 driver.navigate().to("https://codenboxautomationlab.com/practice/");
+    	 
+    	 
+    	 
+     }
+    	 
+    	 
+ 
+  
     
      @AfterTest
     public void AutomationClose() {
